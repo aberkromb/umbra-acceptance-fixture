@@ -1,0 +1,39 @@
+{
+  "fixture_version": 2,
+  "input_role": "analyst_input_texts",
+  "cases": [
+    {
+      "when": [
+        {
+          "source": "input",
+          "pointer": "",
+          "op": "is_non_null"
+        }
+      ],
+      "exit_code": 0,
+      "files": {
+        "context.json": {
+          "environment_names": true
+        },
+        "output.json": {
+          "json": {
+            "context": {
+              "path": "context.json",
+              "metadata": {}
+            }
+          }
+        },
+        "expense.json": {
+          "json": {
+            "currency": "USD",
+            "tokens": 0,
+            "engine_reported_amount": 0
+          }
+        },
+        "decision-trace.json": {
+          "json": []
+        }
+      }
+    }
+  ]
+}

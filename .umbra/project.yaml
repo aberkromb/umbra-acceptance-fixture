@@ -1,6 +1,7 @@
 version: 2
-protected: []
 inputs:
   - README.md
-materials: {}
+materials:
+  task_context_model: fixtures/04-context-environment.json
 output_root: docs/work
+protected: []
