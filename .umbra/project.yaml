@@ -2,3 +2,5 @@ version: 2
 protected: []
 inputs:
   - README.md
+materials: {}
+output_root: docs/work
