@@ -1,4 +1,4 @@
-version: 2
+version: 3
 protected: []
 inputs:
   - README.md
