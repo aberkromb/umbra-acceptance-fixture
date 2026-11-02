@@ -1,4 +1,5 @@
-version: 2
+version: 4
+project_name: Umbra Acceptance Fixture
 inputs:
   - README.md
 materials:
