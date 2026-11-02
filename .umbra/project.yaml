@@ -1,4 +1,5 @@
-version: 3
+version: 4
+project_name: Umbra Acceptance Fixture
 protected: []
 inputs:
   - README.md
