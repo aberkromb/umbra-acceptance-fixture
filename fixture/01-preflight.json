@@ -1,0 +1,89 @@
+{
+  "fixture_version": 2,
+  "input_role": "preflight_profile",
+  "cases": [
+    {
+      "when": [
+        {
+          "source": "input",
+          "pointer": "",
+          "op": "is_non_null"
+        }
+      ],
+      "exit_code": 0,
+      "files": {
+        "preflight.json": {
+          "json": {
+            "version": 1,
+            "writeset": [
+              {
+                "zone": "code",
+                "kind": "code",
+                "paths": [
+                  "src/allowed.py",
+                  "uid.txt"
+                ]
+              }
+            ],
+            "discrepancies": [],
+            "question": null
+          }
+        },
+        "output.json": {
+          "json": {
+            "preflight": {
+              "path": "preflight.json",
+              "metadata": {}
+            }
+          }
+        },
+        "decision-trace.json": {
+          "json": []
+        },
+        "model-response.json": {
+          "json": {
+            "version": 2,
+            "kind": "completed",
+            "outputs": {
+              "preflight": {
+                "path": "preflight.json",
+                "metadata": {},
+                "content": "{\"version\":1,\"writeset\":[{\"zone\":\"code\",\"kind\":\"code\",\"paths\":[\"src/allowed.py\",\"uid.txt\"]}],\"discrepancies\":[],\"question\":null}\n"
+              }
+            },
+            "verdict": null,
+            "question": null,
+            "decision_trace": [],
+            "implementation_notes": null
+          }
+        },
+        "usage.json": {
+          "json": {
+            "fixture": "implementation-stub"
+          }
+        },
+        "expense.json": {
+          "json": {
+            "version": 2,
+            "usage": {
+              "input_uncached": 0,
+              "input_cached": 0,
+              "input_cache_write": 0,
+              "output": 0,
+              "complete": true,
+              "reason": null
+            },
+            "vendor_amount": null,
+            "source": {
+              "path": "usage.json",
+              "artifact": {
+                "key": "d2ca9070bae459d837f64cfcce90f2d6c4680df5bb4c56253c9a35dab533dde7",
+                "size": 34
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

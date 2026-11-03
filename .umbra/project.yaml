@@ -1,7 +1,66 @@
 version: 4
-project_name: Umbra Acceptance Fixture
-protected: []
+project_name: Umbra
 inputs:
-  - README.md
-materials: {}
-output_root: docs/work
+- work/task.md
+materials:
+  task_01_preflight: fixture/01-preflight.json
+  task_05_code: fixture/05-code.json
+  task_07_tests: fixture/07-tests.json
+  task_15_review_model: fixture/15-review-model.json
+  task_16_independent_verification: fixture/16-verification.json
+output_root: work
+workspace:
+  exclude: []
+  max_files: 16
+  max_bytes: 32768
+protected: []
+context:
+  text: scenario:first
+zones:
+  code:
+    kind: code
+    paths:
+    - src/allowed.py
+    - uid.txt
+  test:
+    kind: test
+    paths:
+    - tests/**
+toolchain:
+  image: python@sha256:35caba83af2fe6da9a5d922f9b0156f21d1246a48278c58a08bd253303ba42e8
+  limits:
+    cpu: 1
+    memory_bytes: 134217728
+    pids: 32
+    timeout_seconds: 30
+commands:
+  a8_uid:
+    run: id -u > uid.txt
+    mutates: true
+    requires: []
+    skip_exit_codes: []
+  a1_probe:
+    run: for p in /var/run/docker.sock /run/docker.sock /var/lib/docker /var/lib/docker/volumes/umbra-server_minio-data/_data;
+      do if [ -e "$p" ]; then echo "A1_PRESENT $p"; else echo "A1_ABSENT $p"; fi;
+      done; env
+    mutates: false
+    requires: []
+    skip_exit_codes: []
+  a9_limits:
+    run: cat /sys/fs/cgroup/memory.max /sys/fs/cgroup/pids.max
+    mutates: false
+    requires: []
+    skip_exit_codes: []
+check_profiles:
+  fast:
+    commands:
+    - a1_probe
+    - a9_limits
+    required: true
+tasks:
+  roots:
+  - work
+  verification_report: '{stem}.verification.md'
+  criteria_file: '{stem}.criteria.json'
+review_triggers:
+  paths: []

@@ -1,0 +1,458 @@
+{
+  "fixture_version": 2,
+  "input_role": "code_context",
+  "cases": [
+    {
+      "when": [
+        {
+          "source": "input",
+          "pointer": "/context_text",
+          "op": "equals",
+          "value": "scenario:first"
+        }
+      ],
+      "exit_code": 0,
+      "files": {
+        "code_changeset.json": {
+          "json": {
+            "version": 1,
+            "base_commit": {
+              "$copy": "/base_commit"
+            },
+            "files": {
+              "src/allowed.py": {
+                "content_base64": "UEFTUwo=",
+                "executable": false
+              }
+            },
+            "deletions": []
+          }
+        },
+        "output.json": {
+          "json": {
+            "code_changeset": {
+              "path": "code_changeset.json",
+              "metadata": {}
+            }
+          }
+        },
+        "decision-trace.json": {
+          "json": [
+            {
+              "fork": "Выбор пути правки",
+              "chosen_assumption": "src/allowed.py",
+              "basis": "Сценарий реализации одной спеки",
+              "reversible": true
+            }
+          ]
+        },
+        "model-response.json": {
+          "json": {
+            "version": 2,
+            "kind": "completed",
+            "outputs": {
+              "code_changeset": {
+                "path": "code_changeset.json",
+                "metadata": {},
+                "content": {
+                  "$json_text": {
+                    "version": 1,
+                    "base_commit": {
+                      "$copy": "/base_commit"
+                    },
+                    "files": {
+                      "src/allowed.py": {
+                        "content_base64": "UEFTUwo=",
+                        "executable": false
+                      }
+                    },
+                    "deletions": []
+                  }
+                }
+              }
+            },
+            "verdict": null,
+            "question": null,
+            "decision_trace": [
+              {
+                "fork": "Выбор пути правки",
+                "chosen_assumption": "src/allowed.py",
+                "basis": "Сценарий реализации одной спеки",
+                "reversible": true
+              }
+            ],
+            "implementation_notes": null
+          }
+        },
+        "usage.json": {
+          "json": {
+            "fixture": "implementation-stub"
+          }
+        },
+        "expense.json": {
+          "json": {
+            "version": 2,
+            "usage": {
+              "input_uncached": 0,
+              "input_cached": 0,
+              "input_cache_write": 0,
+              "output": 0,
+              "complete": true,
+              "reason": null
+            },
+            "vendor_amount": null,
+            "source": {
+              "path": "usage.json",
+              "artifact": {
+                "key": "d2ca9070bae459d837f64cfcce90f2d6c4680df5bb4c56253c9a35dab533dde7",
+                "size": 34
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "when": [
+        {
+          "source": "input",
+          "pointer": "/context_text",
+          "op": "equals",
+          "value": "scenario:repair"
+        },
+        {
+          "source": "input",
+          "pointer": "/files/src~1allowed.py/text",
+          "op": "equals",
+          "value": "START\n"
+        }
+      ],
+      "exit_code": 0,
+      "files": {
+        "code_changeset.json": {
+          "json": {
+            "version": 1,
+            "base_commit": {
+              "$copy": "/base_commit"
+            },
+            "files": {
+              "src/allowed.py": {
+                "content_base64": "RkFJTAo=",
+                "executable": false
+              }
+            },
+            "deletions": []
+          }
+        },
+        "output.json": {
+          "json": {
+            "code_changeset": {
+              "path": "code_changeset.json",
+              "metadata": {}
+            }
+          }
+        },
+        "decision-trace.json": {
+          "json": [
+            {
+              "fork": "Выбор пути правки",
+              "chosen_assumption": "src/allowed.py",
+              "basis": "Сценарий реализации одной спеки",
+              "reversible": true
+            }
+          ]
+        },
+        "model-response.json": {
+          "json": {
+            "version": 2,
+            "kind": "completed",
+            "outputs": {
+              "code_changeset": {
+                "path": "code_changeset.json",
+                "metadata": {},
+                "content": {
+                  "$json_text": {
+                    "version": 1,
+                    "base_commit": {
+                      "$copy": "/base_commit"
+                    },
+                    "files": {
+                      "src/allowed.py": {
+                        "content_base64": "RkFJTAo=",
+                        "executable": false
+                      }
+                    },
+                    "deletions": []
+                  }
+                }
+              }
+            },
+            "verdict": null,
+            "question": null,
+            "decision_trace": [
+              {
+                "fork": "Выбор пути правки",
+                "chosen_assumption": "src/allowed.py",
+                "basis": "Сценарий реализации одной спеки",
+                "reversible": true
+              }
+            ],
+            "implementation_notes": null
+          }
+        },
+        "usage.json": {
+          "json": {
+            "fixture": "implementation-stub"
+          }
+        },
+        "expense.json": {
+          "json": {
+            "version": 2,
+            "usage": {
+              "input_uncached": 0,
+              "input_cached": 0,
+              "input_cache_write": 0,
+              "output": 0,
+              "complete": true,
+              "reason": null
+            },
+            "vendor_amount": null,
+            "source": {
+              "path": "usage.json",
+              "artifact": {
+                "key": "d2ca9070bae459d837f64cfcce90f2d6c4680df5bb4c56253c9a35dab533dde7",
+                "size": 34
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "when": [
+        {
+          "source": "input",
+          "pointer": "/context_text",
+          "op": "equals",
+          "value": "scenario:repair"
+        },
+        {
+          "source": "input",
+          "pointer": "/files/src~1allowed.py/text",
+          "op": "equals",
+          "value": "FAIL\n"
+        }
+      ],
+      "exit_code": 0,
+      "files": {
+        "code_changeset.json": {
+          "json": {
+            "version": 1,
+            "base_commit": {
+              "$copy": "/base_commit"
+            },
+            "files": {
+              "src/allowed.py": {
+                "content_base64": "UEFTUwo=",
+                "executable": false
+              }
+            },
+            "deletions": []
+          }
+        },
+        "output.json": {
+          "json": {
+            "code_changeset": {
+              "path": "code_changeset.json",
+              "metadata": {}
+            }
+          }
+        },
+        "decision-trace.json": {
+          "json": [
+            {
+              "fork": "Выбор пути правки",
+              "chosen_assumption": "src/allowed.py",
+              "basis": "Сценарий реализации одной спеки",
+              "reversible": true
+            }
+          ]
+        },
+        "model-response.json": {
+          "json": {
+            "version": 2,
+            "kind": "completed",
+            "outputs": {
+              "code_changeset": {
+                "path": "code_changeset.json",
+                "metadata": {},
+                "content": {
+                  "$json_text": {
+                    "version": 1,
+                    "base_commit": {
+                      "$copy": "/base_commit"
+                    },
+                    "files": {
+                      "src/allowed.py": {
+                        "content_base64": "UEFTUwo=",
+                        "executable": false
+                      }
+                    },
+                    "deletions": []
+                  }
+                }
+              }
+            },
+            "verdict": null,
+            "question": null,
+            "decision_trace": [
+              {
+                "fork": "Выбор пути правки",
+                "chosen_assumption": "src/allowed.py",
+                "basis": "Сценарий реализации одной спеки",
+                "reversible": true
+              }
+            ],
+            "implementation_notes": null
+          }
+        },
+        "usage.json": {
+          "json": {
+            "fixture": "implementation-stub"
+          }
+        },
+        "expense.json": {
+          "json": {
+            "version": 2,
+            "usage": {
+              "input_uncached": 0,
+              "input_cached": 0,
+              "input_cache_write": 0,
+              "output": 0,
+              "complete": true,
+              "reason": null
+            },
+            "vendor_amount": null,
+            "source": {
+              "path": "usage.json",
+              "artifact": {
+                "key": "d2ca9070bae459d837f64cfcce90f2d6c4680df5bb4c56253c9a35dab533dde7",
+                "size": 34
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "when": [
+        {
+          "source": "input",
+          "pointer": "/context_text",
+          "op": "equals",
+          "value": "scenario:outside"
+        }
+      ],
+      "exit_code": 0,
+      "files": {
+        "code_changeset.json": {
+          "json": {
+            "version": 1,
+            "base_commit": {
+              "$copy": "/base_commit"
+            },
+            "files": {
+              "src/forbidden.py": {
+                "content_base64": "T1VUU0lERQo=",
+                "executable": false
+              }
+            },
+            "deletions": []
+          }
+        },
+        "output.json": {
+          "json": {
+            "code_changeset": {
+              "path": "code_changeset.json",
+              "metadata": {}
+            }
+          }
+        },
+        "decision-trace.json": {
+          "json": [
+            {
+              "fork": "Выбор пути правки",
+              "chosen_assumption": "src/forbidden.py",
+              "basis": "Сценарий реализации одной спеки",
+              "reversible": true
+            }
+          ]
+        },
+        "model-response.json": {
+          "json": {
+            "version": 2,
+            "kind": "completed",
+            "outputs": {
+              "code_changeset": {
+                "path": "code_changeset.json",
+                "metadata": {},
+                "content": {
+                  "$json_text": {
+                    "version": 1,
+                    "base_commit": {
+                      "$copy": "/base_commit"
+                    },
+                    "files": {
+                      "src/forbidden.py": {
+                        "content_base64": "T1VUU0lERQo=",
+                        "executable": false
+                      }
+                    },
+                    "deletions": []
+                  }
+                }
+              }
+            },
+            "verdict": null,
+            "question": null,
+            "decision_trace": [
+              {
+                "fork": "Выбор пути правки",
+                "chosen_assumption": "src/forbidden.py",
+                "basis": "Сценарий реализации одной спеки",
+                "reversible": true
+              }
+            ],
+            "implementation_notes": null
+          }
+        },
+        "usage.json": {
+          "json": {
+            "fixture": "implementation-stub"
+          }
+        },
+        "expense.json": {
+          "json": {
+            "version": 2,
+            "usage": {
+              "input_uncached": 0,
+              "input_cached": 0,
+              "input_cache_write": 0,
+              "output": 0,
+              "complete": true,
+              "reason": null
+            },
+            "vendor_amount": null,
+            "source": {
+              "path": "usage.json",
+              "artifact": {
+                "key": "d2ca9070bae459d837f64cfcce90f2d6c4680df5bb4c56253c9a35dab533dde7",
+                "size": 34
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

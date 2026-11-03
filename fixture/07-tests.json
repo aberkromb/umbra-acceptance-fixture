@@ -1,0 +1,91 @@
+{
+  "fixture_version": 2,
+  "input_role": "test_context",
+  "cases": [
+    {
+      "when": [
+        {
+          "source": "input",
+          "pointer": "",
+          "op": "is_non_null"
+        }
+      ],
+      "exit_code": 0,
+      "files": {
+        "test_changeset.json": {
+          "json": {
+            "version": 1,
+            "base_commit": {
+              "$copy": "/base_commit"
+            },
+            "files": {},
+            "deletions": []
+          }
+        },
+        "output.json": {
+          "json": {
+            "test_changeset": {
+              "path": "test_changeset.json",
+              "metadata": {}
+            }
+          }
+        },
+        "decision-trace.json": {
+          "json": []
+        },
+        "model-response.json": {
+          "json": {
+            "version": 2,
+            "kind": "completed",
+            "outputs": {
+              "test_changeset": {
+                "path": "test_changeset.json",
+                "metadata": {},
+                "content": {
+                  "$json_text": {
+                    "version": 1,
+                    "base_commit": {
+                      "$copy": "/base_commit"
+                    },
+                    "files": {},
+                    "deletions": []
+                  }
+                }
+              }
+            },
+            "verdict": null,
+            "question": null,
+            "decision_trace": [],
+            "implementation_notes": null
+          }
+        },
+        "usage.json": {
+          "json": {
+            "fixture": "implementation-stub"
+          }
+        },
+        "expense.json": {
+          "json": {
+            "version": 2,
+            "usage": {
+              "input_uncached": 0,
+              "input_cached": 0,
+              "input_cache_write": 0,
+              "output": 0,
+              "complete": true,
+              "reason": null
+            },
+            "vendor_amount": null,
+            "source": {
+              "path": "usage.json",
+              "artifact": {
+                "key": "d2ca9070bae459d837f64cfcce90f2d6c4680df5bb4c56253c9a35dab533dde7",
+                "size": 34
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}
